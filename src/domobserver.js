@@ -47,7 +47,7 @@ export class DOMObserver {
                m.type == "characterData" && m.oldValue.length > m.target.nodeValue.length))
           this.flushSoon()
         else
-          this.flush()
+          this.flushSoon();
       })
     this.currentSelection = new SelectionState
     if (useCharData) {
